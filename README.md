@@ -65,4 +65,4 @@ docker stack deploy --prune --compose-file docker-compose.yml spring-backend
 
 - App: http://localhost:8080/spring-jboss  
 - Swagger: http://localhost:8080/spring-jboss/swagger-ui.html
-- curl localhost:8080/spring-jboss/api/actuator/health
+- curl localhost:8080/spring-jboss/actuator/health
