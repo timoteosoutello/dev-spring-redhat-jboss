@@ -23,10 +23,13 @@ To know if the mvn is installed, run the command "mvn --version" and check if it
 
 Depends on what to be used, need to change the pom dependency and other datasource parameters like below:
 
+Without JBOSS:
 spring.datasource.url=jdbc:
 spring.datasource.driver-class-name=
-
 PS: Currently using H2 memory database
+
+With JBOSS, is necessary to adapt the standalone/domain configurations.
+
 
 ## Running the App
 
@@ -39,7 +42,7 @@ mvn spring-boot:run
 
 docker build --no-cache -t spring-backend-jboss .
 
-docker run -d --restart always -p 9797:9797 --name spring-backend -t spring-backend
+docker run -d --restart always -p 8080:8080 --name spring-backend-jboss -t spring-backend-jboss
 
 **Publishing (with tag version)**:
 
@@ -60,6 +63,6 @@ docker stack deploy --prune --compose-file docker-compose.yml spring-backend
 
 ## Accessing application by swagger-UI
 
-- App: http://localhost:8080/spring-data-rest/api  
-- Swagger: http://localhost:8080/spring-data-rest/api/swagger-ui.html#/
-- curl localhost:8080/spring-data-rest/api/actuator/health
+- App: http://localhost:8080/spring-jboss  
+- Swagger: http://localhost:8080/spring-jboss/swagger-ui.html
+- curl localhost:8080/spring-jboss/api/actuator/health
