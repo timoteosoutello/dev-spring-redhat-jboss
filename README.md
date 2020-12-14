@@ -66,3 +66,11 @@ docker stack deploy --prune --compose-file docker-compose.yml spring-backend
 - App: http://localhost:8080/spring-jboss  
 - Swagger: http://localhost:8080/spring-jboss/swagger-ui.html
 - curl localhost:8080/spring-jboss/actuator/health
+
+## External References
+
+- https://infinispan.org/
+- http://www.mastertheboss.com/jboss-frameworks/infinispan/using-infinispan-with-wildfly-8
+- https://infinispan.org/tutorials/simple/hibernate-cache-spring-local/
+- https://github.com/infinispan/infinispan-simple-tutorials/tree/master/hibernate-cache
+- https://medium.com/@skywalkerhunter/speeding-up-your-hibernate-with-cache-level-2-ehcache-in-1-min-28255622bf6f
